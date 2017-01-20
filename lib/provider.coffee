@@ -11,6 +11,10 @@ module.exports =
   suggestionPriority: 2
 
   getSuggestions: ({editor, bufferPosition, scopeDescriptor, prefix, activatedManually}) ->
+
+    if prefix.length < 3
+      return
+
     completions = properties.filter (p) -> p.match prefix
     return completions.map (c) -> { text: c }
 
