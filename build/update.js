@@ -3,7 +3,7 @@ var fs = require('fs');
 // file paths
 var fname_css = "uikit/dist/css/uikit.css";
 var fname_js = "uikit/dist/js/uikit.js";
-var outfile = "lib/html.complete.json";
+var outfile = "completions.json";
 
 if (!fs.existsSync(fname_css) || !fs.existsSync(fname_js)) {
     console.log("Can't locate UIkit files");
@@ -37,11 +37,9 @@ function js() {
 function atom() {
     var _css = css(),
         _js  = js(),
-        lst = _css.concat(_js),
-        obj = { ".text.html, .source.jade, .text.css, .source.js, .text.html.php, .source.php": {
-                "editor": { "completions": lst }}};
+        lst = _css.concat(_js);
 
-    fs.writeFileSync(outfile, JSON.stringify(obj, null, 4));
+    fs.writeFileSync(outfile, JSON.stringify(lst, null, 4));
     console.log("Done.");
 }
 
