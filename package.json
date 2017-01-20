@@ -1,15 +1,15 @@
 {
   "name": "uikit-atom",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "./lib/main",
   "description": "Official autocomplete package for the UIkit frontend framework",
   "scripts": {
     "update": "git clone git@github.com:uikit/uikit.git && node build/update && rm -rf uikit"
   },
   "keywords": [
-      "atom",
-      "uikit",
-      "autocompletion"
+    "atom",
+    "uikit",
+    "autocompletion"
   ],
   "repository": "https://github.com/uikit/uikit-atom",
   "license": "MIT",
