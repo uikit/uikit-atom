@@ -6,7 +6,7 @@
     "update": "git clone git@github.com:uikit/uikit.git && node build/update && rm -rf uikit"
   },
   "keywords": [
-      "atom"
+      "atom",
       "uikit",
       "autocompletion"
   ],
