@@ -1,3 +1,6 @@
+fs = require 'fs'
+path = require 'path'
+
 properties = {}
 
 module.exports =
