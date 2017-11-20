@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.3
+ - fix: fixed crash on certain autocompletions
+
 ## 0.2.2 (February 9, 2017)
  - fix: crash caused by missing dependency import
  - updated completions for UIkit 3.0.0-beta.9

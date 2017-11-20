@@ -18,7 +18,7 @@ module.exports =
     if prefix.length < 3
       return
 
-    completions = properties.filter (p) -> p.match prefix
+    completions = properties.filter (p) -> (p.indexOf prefix) >= 0
     return completions.map (c) -> { text: c }
 
   loadProperties: ->
