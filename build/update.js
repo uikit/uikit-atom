@@ -1,5 +1,5 @@
 var fs = require('fs');
-
+var current = require('../completions.json');
 // file paths
 var fname_css = "uikit/dist/css/uikit.css";
 var fname_js = "uikit/dist/js/uikit.js";
@@ -19,8 +19,8 @@ function remove_duplicates(arr) {
 
 // classes: uk-* from CSS
 function css() {
-    var src     = fs.readFileSync(fname_css).toString(),
-        classes = src.match(/\.(uk-[a-z\d\-]+)/g),
+    var src = fs.readFileSync(fname_css).toString();
+    var classes = src.match(/\.(uk-[a-z\d\-]+)/g);
         classes = remove_duplicates(classes).map(function(cls) { return cls.substr(1); }); // remove leading dot
 
     return classes;
@@ -39,6 +39,22 @@ function atom() {
         _js  = js(),
         lst = _css.concat(_js);
 
+
+    lst = remove_duplicates(lst);
+ 
+    lst = lst.sort((a, b) => a < b ? -1 : 1 );
+
+    lst.forEach(cls => {
+        if(current.indexOf(cls) < 0) {
+            console.log('added:', cls);
+        }
+    });
+    current.forEach(cls => {
+        if(lst.indexOf(cls) < 0) {
+            console.log('removed:', cls);
+        }
+    });
+        
     fs.writeFileSync(outfile, JSON.stringify(lst, null, 4));
     console.log("Done.");
 }

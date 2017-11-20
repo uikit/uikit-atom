@@ -1,6 +1,9 @@
 # Changelog
 
-## 0.2.3
+## 0.2.4 (November 20, 2017)
+  - updated completions for UIkit 3.0.0-beta35
+
+## 0.2.3 (November 20, 2017)
  - fix: fixed crash on certain autocompletions
 
 ## 0.2.2 (February 9, 2017)

@@ -4,6 +4,8 @@
   "main": "./lib/main",
   "description": "Official autocomplete package for the UIkit frontend framework",
   "scripts": {
+    "eslint": "eslint --quiet --ext .js * || true",
+    "eslint:fix": "eslint --fix --quiet --ext .js * || true",
     "update": "git clone git@github.com:uikit/uikit.git && node build/update && rm -rf uikit"
   },
   "keywords": [
@@ -26,5 +28,8 @@
   "dependencies": {
     "file-system": "2.2.2",
     "path": "0.12.7"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0"
   }
 }
