@@ -10,7 +10,7 @@ module.exports = {
     ],
     "parserOptions": {
         "sourceType": "module"
-    }
+    },
     "rules": {
         "no-cond-assign": 0,
         "indent-legacy": 0,
