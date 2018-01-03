@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.3.1 (Janualy 3, 2018)
+  - upped version & fixed changelog
 ## 0.2.4 (November 20, 2017)
   - updated completions for UIkit 3.0.0-beta35
 
