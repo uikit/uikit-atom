@@ -1,6 +1,6 @@
 {
   "name": "uikit-atom",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "./lib/main",
   "description": "Official autocomplete package for the UIkit frontend framework",
   "scripts": {
